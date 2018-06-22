@@ -83,7 +83,7 @@ main #start-lyft.container {
     color: #ff00bf;
 }
 
-#div-login, #div-verify, #div-signup {
+#div-login, #div-verify, #div-signup, #div-sucess {
     position: relative;
     top: 25%;
     display: block;
@@ -173,6 +173,26 @@ main #start-lyft.container {
     display: inline-flex;
     margin: 0;
     width: 100%;
+}
+
+/* Sucess */
+#div-sucess {
+    height: 100%;
+    padding: 0;
+    top: 0;
+}
+
+#div-sucess a > img {
+    height: 100%;
+    width: 100%;
+}
+
+#div-sucess a > i {
+    background-color: white;
+    font-size: 5em;
+    position: absolute;
+    left: 40%;
+    top: 80vh;
 }
 
 
