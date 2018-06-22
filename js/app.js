@@ -29,6 +29,11 @@ function getNumber(){
 /* Función validar input */
 function validateInput () {
   var recoverCode = window.location.search.substr(1);
+  var textInput = $('#textInput').text();  
+
+  if (textInput = recoverCode) {
+    $('#btn-next-2').removeClass("disabled");
+  }
 }
 
 /*
