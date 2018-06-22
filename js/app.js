@@ -22,8 +22,13 @@ $('#textarea1').keyup(function(){
 function getNumber(){
   var numSucess = numVerification();
   swal("Tu código es", "LAB-" + numSucess).then(function(){
-    window.location = "verify.html?code="+ numSucess;
+    window.location = "verify.html?"+ numSucess;
   });
+}
+
+/* Función validar input */
+function validateInput () {
+  var recoverCode = window.location.search.substr(1);
 }
 
 /*
