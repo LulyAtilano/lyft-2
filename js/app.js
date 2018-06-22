@@ -22,10 +22,11 @@ $('#textarea1').keyup(function(){
 function getNumber(){
   var numSucess = numVerification();
   swal("Tu código es", "LAB-" + numSucess).then(function(){
-    window.location = "verify.html";
+    window.location = "verify.html?code="+ numSucess;
   });
 }
 
+/*
 var template = '<div class="swal-modal" role="dialog" aria-modal="true>'+
                   '<div class="swal-title" style>Tu código es</div>'+
                   '<div class="swal-footer">'+
@@ -40,13 +41,14 @@ var template = '<div class="swal-modal" role="dialog" aria-modal="true>'+
                     '</div>'+
                     '<div class="swal-text" style>__LAB-__</div>'+
                   '</div>'+
-                '</div>'+
-/* Función para mostar num en la modal */
+                '</div>'+ */
+
+/* Función para mostar num en la modal 
 function showNumber (num) {
 
   var templateModal = "";
   templateModal = template.replace("__LAB-__", "LAB-" + num);
-}
+} */
 
 /* Función para generar el número aleatorio de verificación */
 function numVerification() {
