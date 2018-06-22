@@ -1,3 +1,4 @@
+/* Función para validar que el teléfono tenga 10 dígitos */
 function getNumber(){
   var phone = $('#textarea1').val();
   
@@ -14,6 +15,33 @@ function getNumber(){
   $('#textarea1').val('');
   
 }
+
+var template = '<div class="swal-modal" role="dialog" aria-modal="true>'+
+                  '<div class="swal-title" style>Tu código es</div>'+
+                  '<div class="swal-footer">'+
+                      '<div class="swal-button-container">'+
+                          '<button class="swal-button swal-button--confirm">OK</button>'+
+                        '<div class="swal-button__loader">'+
+                          '<div></div>'+
+                          '<div></div>'+
+                          '<div></div>'+
+                        '</div>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="swal-text" style>__LAB-__</div>'+
+                  '</div>'+
+                '</div>'+
+
+/* Función para generar el número aleatorio de verificación */
+
+function numVerification(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+  console.log(Math.floor(Math.random() * (max - min)) + min);
+}
+
+
+
+numVerification(2,33);
 
 $(document).ready(function(){
   setTimeout(() => ('welcome.html', 3000));
