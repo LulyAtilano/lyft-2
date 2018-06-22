@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 548px;
+    box-sizing: border-box;
+}
+
+* > .row {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+*.container {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.font-lyft {
+    font-family: Gotham SSm A;
+    color: #ff00bf;
+    font-size: 3em;
+}
+
+.arrow_back {
+    color: #ad1457;
+}
+
+/* WELCOME PAGE */
+main div#div-welcome img {
+    background-repeat: no-repeat;
+    min-height: 548px;
+    width: 100%;
+}
+
+/* INDEX */
+main {
+    height: 100%;
+}
+
+main #start-lyft.container {
+    margin: 0;
+    background-image: url(../assets/images/city.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 100%;
+}
+
+#start-lyft div.row div.col.s12 > img:first-child {
+    height: 3em;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: auto;
+}
+
+#logo-start {
+    height: 4em;
+    position: relative;
+    top: 2em;
+    width: auto;
+}
+
+#start-lyft.container div.row div.col.s12 div.col.s4 {
+    position: relative;
+    top: 19em;
+    width: 100%;
+}
+
+#start-lyft.container div.row div.col.s12 div.col.s4 > button {
+    border: 1px solid white;
+}
+
+#start-lyft.container div.row div.col.s12 div.col.s4 > button:hover { 
+    border: 1px solid #ff00bf;
+    background-color: transparent;
+    color: #ff00bf;
+}
+
+#div-login, #div-verify, #div-signup {
+    position: relative;
+    top: 25%;
+    display: block;
+    padding: 0 8.33%;
+    width: 100%;
+}
+
+/* LOG IN */
+#div-login div.row {
+    display: inline-flex;
+}
+
+#div-login div.row > div {
+    padding: 0;
+}
+
+#div-login div.row form.s12 {
+    border: 1px solid blue;
+}
+
+#div-login div.row form {
+    padding: 0;
+}
+
+/* Verify */
+#div-verify div.row > div {
+    padding: 0;
+}
+
+#div-verify div.row {
+    display: block;
+}
+
+#div-verify div.row:last-of-type > a {
+    position: relative;
+    top: 7.5em;
+}
+
+/* Sign Up */
+#div-signup div.row > div {
+    padding: 0;
+}
+
+#div-signup div.row {
+    display: block;
+}
+
+#div-signup div.row:last-of-type > a {
+    position: relative;
+    top: 7.5em;
+}
+
+#div-signup div.row:nth-child(2n) > div.input-field {
+    border: 1px solid gray;
+    top: 10px;
+}
+
+#div-signup #contact-signup.row div.col.s12 div.row {
+    margin: 0;
+    border: 1px solid gray;
+}
+
+#div-signup div.row div.input-field > input#autocomplete-input {
+    border-bottom: 0;
+}
+
+#div-signup #contact-signup.row div.col.s12 div.row div.input-field > input {
+    width: 102px;
+    border-bottom: 0;
+}
+
+#div-signup #contact-signup.row div.col.s12 div.row div.input-field > label {
+    width: 90px;
+}
+
+#div-signup #contact-signup.row div.col.s12 div.row div.input-field > label:last-of-type {
+    left: 60%;
+    width: 90px;
+}
+
+#div-signup div div.input-field.col.s10 {
+    display: inline-flex;
+    margin: 0;
+    width: 100%;
+}
+
+
+/* Media Queries */
+
+@media all (min-width:600px) and (max-width: 991px) {
+    body {
+        max-height: 768px;;
+        width: 85%;
+    }
+}
+
+@media all (min-width:992px) and (max-width: 1440px) {
+    body {
+        max-height: 730px;
+        width: 70%;
+    }
+}
