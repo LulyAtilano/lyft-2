@@ -100,7 +100,7 @@ main #start-lyft.container {
     padding: 0;
 }
 
-#div-login div.row form.s12 {
+#div-login div.row form.col.s8 div.row div.input-field.col.s10 {
     border: 1px solid blue;
 }
 
@@ -120,6 +120,11 @@ main #start-lyft.container {
 #div-verify div.row:last-of-type > a {
     position: relative;
     top: 7.5em;
+}
+
+#lada-country {
+    position: relative;
+    top: 1em;
 }
 
 /* Sign Up */

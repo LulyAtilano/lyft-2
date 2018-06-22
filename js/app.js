@@ -1,3 +1,11 @@
+$('#country-select').change(function(){
+  $(this).val();
+
+  console.log($(this).val());
+  console.log("si funciona");
+  $('#lada-country').text("+" + $(this).val());
+});
+
 /* Función para validar que el teléfono tenga 10 dígitos */
 function getNumber(){
   var phone = $('#textarea1').val();
@@ -39,26 +47,14 @@ function numVerification(min, max) {
   console.log(Math.floor(Math.random() * (max - min)) + min);
 }
 
-
-
-numVerification(2,33);
+/*numVerification(2,33);*/
 
 $(document).ready(function(){
   setTimeout(() => ('welcome.html', 3000));
 
   $('#btn-next').click(getNumber);
 
-  $('.dropdown-trigger').dropdown();
-    
-  $('.dropdown-button').dropdown({
-    inDuration: 300,
-    outDuration: 225,
-    constrain_width: false, // Does not change width of dropdown to that of the activator
-    hover: true, // Activate on hover
-    gutter: 0, // Spacing from edge
-    belowOrigin: false, // Displays dropdown below the button
-    alignment: 'left' // Displays dropdown with edge aligned to the left of button
-  });
+  $('select').formSelect();
   
   $('input.autocomplete').autocomplete({
       data: {

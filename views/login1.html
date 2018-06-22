@@ -25,35 +25,35 @@
                 <hr>
                 <div class="row">
                     <div class="col s4 center-align valign-wrapper">
-                            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'> Locat. </a>
-                            <ul id='dropdown1' class='dropdown-content center-align'>
-                                <li> <a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='dropdown1'> 
-                                        <img src="http://www.countryflags.io/mx/flat/64.png">
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='dropdown1'> 
-                                        <img src="http://www.countryflags.io/co/flat/64.png">
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='dropdown1'> 
-                                        <img src="http://www.countryflags.io/pe/flat/64.png">
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='dropdown1'> 
-                                        <img src="http://www.countryflags.io/us/flat/64.png">
-                                    </a>
-                                </li>
-                            </ul>
+                        <!--<a class='dropdown-trigger btn' href='#' data-target='dropdown1'> Locat. </a> -->
+                        <div class="input-field col s12">
+                            <select id="country-select">
+                              <option value="" disabled selected> Country </option>
+                              <option value="52" class='dropdown-button btn transparent center-align' data-icon="http://www.countryflags.io/mx/flat/64.png"> MX </option>
+                              <option value="57" class='dropdown-button btn transparent' data-icon="http://www.countryflags.io/co/flat/64.png"> COL </option>
+                              <option value="51" class='dropdown-button btn transparent' data-icon="http://www.countryflags.io/pe/flat/64.png"> PE </option>
+                              <option value="1" class='dropdown-button btn transparent' data-icon="http://www.countryflags.io/us/flat/64.png"> US </option>
+                            </select>
+                            <label> Your country </label>
+                        </div>    
                     </div>
                     <form class="col s8">
                         <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1"> Phone Number </label>
-                        </div>
+                                <div class="input-field col s1">
+                                    <span id="lada-country"></span>
+                                    <!--    <select id="lada-select">
+                                        <option value="" disabled selected> LADA </option>
+                                        <option value="1" class='dropdown-button btn transparent'> +52 </option>
+                                        <option value="1" class='dropdown-button btn transparent'> +57 </option>
+                                        <option value="1" class='dropdown-button btn transparent'> +51 </option>
+                                        <option value="1" class='dropdown-button btn transparent'> +1 </option>
+                                    </select>
+                                    <label> Lada </label> -->
+                                </div>   
+                            <div class="input-field col s11">
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1"> Phone Number </label>
+                            </div>
                         </div>
                     </form>
                 </div>
