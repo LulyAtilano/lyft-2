@@ -26,6 +26,12 @@ body {
     color: #ad1457;
 }
 
+.transparent {
+    background-color: transparent;
+    box-shadow: none;
+    webkit-box-shadow: none;
+}
+
 /* WELCOME PAGE */
 main div#div-welcome img {
     background-repeat: no-repeat;

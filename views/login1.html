@@ -12,7 +12,7 @@
     </head>
     <body>
         <main> 
-            <div id="div-login" class="s10 offset-s1 l8 offset-l2 center-align">
+            <div id="div-login" class="s10 offset-s1 l4 pull-l4 center-align">
                 <div class="row">
                     <div class="col s2 center-align valign-wrapper">
                         <a href="welcome.html"><i class="material-icons medium arrow_back">arrow_back</i></a>
@@ -27,10 +27,25 @@
                     <div class="col s4 center-align valign-wrapper">
                             <a class='dropdown-trigger btn' href='#' data-target='dropdown1'> Locat. </a>
                             <ul id='dropdown1' class='dropdown-content center-align'>
-                                <li class="center-align"><img src="http://www.countryflags.io/mx/flat/64.png"></li>
-                                <li><img src="http://www.countryflags.io/co/flat/64.png"></li>
-                                <li><img src="http://www.countryflags.io/pe/flat/64.png"></li>
-                                <li><img src="http://www.countryflags.io/us/flat/64.png"></li>
+                                <li> <a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='dropdown1'> 
+                                        <img src="http://www.countryflags.io/mx/flat/64.png">
+                                    </a>
+                                </li>
+                                <li> 
+                                    <a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='dropdown1'> 
+                                        <img src="http://www.countryflags.io/co/flat/64.png">
+                                    </a>
+                                </li>
+                                <li> 
+                                    <a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='dropdown1'> 
+                                        <img src="http://www.countryflags.io/pe/flat/64.png">
+                                    </a>
+                                </li>
+                                <li> 
+                                    <a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='dropdown1'> 
+                                        <img src="http://www.countryflags.io/us/flat/64.png">
+                                    </a>
+                                </li>
                             </ul>
                     </div>
                     <form class="col s8">
@@ -46,13 +61,14 @@
                         <p class="col s12 black-text"> We'll send a text to verify your phone </p>
                 </div>
                 <div class="row">
-                    <a class="col s12 waves-effect waves-light btn pink darken-1 black-text white-text disable"> NEXT </a>
+                    <a id="btn-next" class="col s12 waves-effect waves-light btn pink darken-1 black-text white-text"> NEXT </a>
                 </div>
             </div>
         </main>
 
         <!-- Js Files -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <script src="../js/assets/materialize.min.js"></script>
         <script src="../js/app.js"></script>
