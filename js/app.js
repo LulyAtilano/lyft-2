@@ -56,11 +56,8 @@ function numVerification() {
 
   for ( var i = 0; i < 3; i++) {
     var codeAscci = Math.floor(Math.random()* (57-48) + 48);
-    console.log(codeAscci);
     var stringCodeAscci = String.fromCharCode(codeAscci);
-    console.log(stringCodeAscci);
     newnumber += stringCodeAscci;
-    console.log(newnumber);
   }
   return newnumber;
 }
