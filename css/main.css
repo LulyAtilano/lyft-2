@@ -122,6 +122,15 @@ main #start-lyft.container {
     top: 7.5em;
 }
 
+#div-verify div.row div.col.s12 > p {
+    padding: 0;
+}
+
+#div-verify div.row div.col.s12 > textarea {
+    padding: 10px 0 0 0;
+    margin-right: 2px;
+}
+
 #lada-country {
     position: relative;
     top: 1em;

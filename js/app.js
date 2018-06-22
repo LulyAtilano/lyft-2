@@ -1,3 +1,4 @@
+/* Función para poner la lada según el país */
 $('#country-select').change(function(){
   $(this).val();
 
@@ -6,22 +7,23 @@ $('#country-select').change(function(){
   $('#lada-country').text("+" + $(this).val());
 });
 
-/* Función para validar que el teléfono tenga 10 dígitos */
-function getNumber(){
-  var phone = $('#textarea1').val();
-  
-  if (phone.length == 0 || phone.length <= 9 || phone.length > 10) {
-    $('#btn-next').addClass("disabled");
-    console.log("menos de 9");
-    swal("Ooooops!", "Ingresa por favor un número de 10 dígitos", "error");
-  } else if (phone.length == 10) {
+/* Validando 10 caracteres */
+$('#textarea1').keyup(function(){
+  var phone = $(this).val();
+  if (phone.length == 10) {
     $('#btn-next').removeClass("disabled");
-    console.log("son 10");
-    swal("Tu código es", "LAB-____");
+  } else {
+    $('#btn-next').addClass("disabled");
   }
 
-  $('#textarea1').val('');
-  
+});
+
+/* Función para generar clave aleatoria  */
+function getNumber(){
+  var numSucess = numVerification();
+  swal("Tu código es", "LAB-" + numSucess).then(function(){
+    window.location = "verify.html";
+  });
 }
 
 var template = '<div class="swal-modal" role="dialog" aria-modal="true>'+
@@ -39,15 +41,27 @@ var template = '<div class="swal-modal" role="dialog" aria-modal="true>'+
                     '<div class="swal-text" style>__LAB-__</div>'+
                   '</div>'+
                 '</div>'+
+/* Función para mostar num en la modal */
+function showNumber (num) {
 
-/* Función para generar el número aleatorio de verificación */
-
-function numVerification(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-  console.log(Math.floor(Math.random() * (max - min)) + min);
+  var templateModal = "";
+  templateModal = template.replace("__LAB-__", "LAB-" + num);
 }
 
-/*numVerification(2,33);*/
+/* Función para generar el número aleatorio de verificación */
+function numVerification() {
+  var newnumber = [];
+
+  for ( var i = 0; i < 3; i++) {
+    var codeAscci = Math.floor(Math.random()* (57-48) + 48);
+    console.log(codeAscci);
+    var stringCodeAscci = String.fromCharCode(codeAscci);
+    console.log(stringCodeAscci);
+    newnumber += stringCodeAscci;
+    console.log(newnumber);
+  }
+  return newnumber;
+}
 
 $(document).ready(function(){
   setTimeout(() => ('welcome.html', 3000));
